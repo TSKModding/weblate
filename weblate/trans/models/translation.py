@@ -427,20 +427,20 @@ class Translation(models.Model, URLMixin, LoggerMixin, CacheKeyMixin):
                         self.component.handle_parse_error(error, self)
 
                     # Check for possible duplicate units
-                    if id_hash in updated:
-                        newunit = updated[id_hash]
-                        self.log_warning(
-                            "duplicate string to translate: %s (%s)",
-                            newunit,
-                            repr(newunit.source),
-                        )
-                        self.component.trigger_alert(
-                            "DuplicateString",
-                            language_code=self.language.code,
-                            source=newunit.source,
-                            unit_pk=newunit.pk,
-                        )
-                        continue
+                    # if id_hash in updated:
+                    #     newunit = updated[id_hash]
+                    #     self.log_warning(
+                    #         "duplicate string to translate: %s (%s)",
+                    #         newunit,
+                    #         repr(newunit.source),
+                    #     )
+                    #     self.component.trigger_alert(
+                    #         "DuplicateString",
+                    #         language_code=self.language.code,
+                    #         source=newunit.source,
+                    #         unit_pk=newunit.pk,
+                    #     )
+                    #     continue
 
                     self.sync_unit(dbunits, updated, id_hash, unit, pos + 1)
 
