@@ -1291,6 +1291,7 @@ class ChangeSerializer(RemovableSerializer):
             "author",
             "timestamp",
             "action",
+            "old",
             "target",
             "id",
             "action_name",
