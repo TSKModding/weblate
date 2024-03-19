@@ -1293,6 +1293,7 @@ class ChangeSerializer(RemovableSerializer):
             "action",
             "old",
             "target",
+            "details",
             "id",
             "action_name",
             "url",
