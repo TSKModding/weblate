@@ -29,7 +29,7 @@ SITE_DOMAIN = get_env_str("WEBLATE_SITE_DOMAIN", required=True)
 # Whether site uses https
 ENABLE_HTTPS = get_env_bool("WEBLATE_ENABLE_HTTPS")
 
-SITE_URL = "{}://{}".format("https" if ENABLE_HTTPS else "http", SITE_DOMAIN)
+SITE_URL = "https://{}".format(SITE_DOMAIN)
 
 #
 # Django settings for Weblate project.
